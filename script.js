@@ -1,7 +1,9 @@
-function weatherBallon( cityID ) {
-    var key = '{88107b5d4c713e0e883f6b636fc103a2}';
-    fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+
-     '&appid=' + key)
+var forecastApi = 'https://api.openweathermap.org/data/2.5/forecast?q='
+var Url = `https://api.openweathermap.org/data/2.5/weather?q=`
+
+function weatherBallon( cityName ) {
+    var key = '&appid=88107b5d4c713e0e883f6b636fc103a2';
+    fetch('https://api.openweathermap.org/data/2.5/forecast?q='  + key)
      .then(function(resp) {return resp.json() })
      .then(function(data) {
          console.log(data);
@@ -21,10 +23,9 @@ function drawWeather( d ) {
     document.getElementById('location').innerHTML = d.name;
 }
 
-function weatherBallon( cityID ) {
+function weatherBallon( cityName ) {
     var key = '{88107b5d4c713e0e883f6b636fc103a2}';
-    fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+
-     '&appid=' + key)
+    fetch(forecastApi + key)
      .then(function(resp) {return resp.json() })
      .then(function(data) {
          drawWeather(data);
