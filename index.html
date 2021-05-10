@@ -9,19 +9,27 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <h1>Weather Dashboard</h1>
-    <div id="search" class="col-md-1 mx-4 my-2 ui-widget border-bottom border-dark pb-3 w-25">
-        <form id="locationForm">
-        <input id="locations" type= "text" col my-3" placeholder="Search City"></input></form>
-        <button class="btn btn-primary col" id="searchBtn">Search</button>
-        <ul id="previousSearch"></ul>
-    </div>
+    <section class="top-banner">
+        <div class="container">
+          <h1 class="heading">Forecast</h1>
+          <form>
+            <input type="text" placeholder="Search for a city" autofocus>
+            <button type="submit">City Search</button>
+            <span class="msg"></span>
+          </form>
+        </div>
+      </section>
+    <section class="ajax-section">
+        <div class="container">
+            <ul class="cities"></ul>
+        </div>
+    </section>
 
-    <div id="weather">
+    <!-- <div id="weather">
         <div id="description"></div>
         <h1 id="temperature"></h1>
         <div id="location"></div>
-    </div>
+    </div> -->
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
