@@ -8,28 +8,64 @@
     <link rel="stylesheet" href="./style.css">
     <title>Weather Dashboard</title>
 </head>
-<body>
-    <section class="top-banner">
-        <div class="container">
-          <h1 class="heading">Forecast</h1>
-          <form>
-            <input type="text" placeholder="Search for a city" autofocus>
-            <button type="submit">City Search</button>
-            <span class="msg"></span>
-          </form>
-        </div>
-      </section>
-    <section class="ajax-section">
-        <div class="container">
-            <ul class="cities"></ul>
-        </div>
-    </section>
+ <body class ="main-content container">
+    <header class="jumbotron">
+      <h1 class="display-10">Weather Forecast</h1>
+    </header>
 
-    <!-- <div id="weather">
-        <div id="description"></div>
-        <h1 id="temperature"></h1>
-        <div id="location"></div>
-    </div> -->
+    <Div class="boxLayout">
+
+    
+    <div class="card searchCard , border col-md-6">
+      <h3>Search For a City</h3>
+      <form class="form-inline" id="searchForm">
+        <input
+          id="search-input"
+          class="form-input w-10"
+          type="text"
+          placeholder="Type here"
+        />
+
+        <button class="btn-info">Submit</button>
+        
+        <button type="reset" 
+                form="search-form" 
+                id="dlt-btn" 
+                class="btn-danger">
+          <i class="far fa-trash-alt">
+            </i>Clear
+              </button>
+      </form>
+      <h3 class="searchHistory mt-3"></h3>
+      <hr class="toggle">
+      <ul class="mt-1" id="lastResults"></ul>
+    </div>
+
+    <div class="container, border col-md-6" id="weatherBox">
+        <hr>
+        <h2 class="mt-5">Today's Forecast<span class="toggle"> for <strong class="town"></strong></span></h2>
+        <hr>
+        <div class="icon"></div>
+        <div class="town"></div>
+        <div class="tempurature"> </div>
+        <div class="sky"> </div>
+        <div class="wind"></div>
+        <div class="uv"></div>
+    </div>
+
+</Div>
+
+
+
+
+<div class="fiveDay">
+  <hr>
+    <h2 class="mt-5">Five Day Forecast</h2>
+    <hr>
+    <div id="forecast-wrapper" class="forecast-wrap"></div>
+      </div>
+
+    
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
