@@ -8,3 +8,6 @@
 ## Once the city is submitted, the user is presented with a 5-day forecast for the city they entered.
 
 ![Screenshot (150)](https://user-images.githubusercontent.com/79488120/132610828-82772faa-01d9-4672-803f-65e4352cbf55.png)
+
+### View Live!
+https://stephenobie.github.io/hw6-weather-api/
